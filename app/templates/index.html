@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 <body>
     <section>
         <div class="parallax-container">
-            <img width="100%" class="responsive-img"src="Header.JPG" alt="Header.JPG">
+            <img style="height: 850px;" width="100%" class="responsive-img"src="Header.JPG" alt="Header.JPG">
         </div>
     </section>
 
@@ -87,13 +87,12 @@
                 <h5 class="col s12">Sign up for early access updates!</h5>
             </div>
             <div class="row center">
-                <div class="input-field col s12">
-                    <input id="email" type="email" class="validate">
+                <form action="{{ url_for('index') }}" method="post">
+                    <div class="input-field col s12">
+                    <input id="email" name="email" type="email" class="validate">
                     <label for="email">Email</label>
-                    <div class="btn grey darken-2">
-                        <span>Subscribe</span>
-                    </div>
-                </div>
+                    <input type="submit" class="btn grey darken-2">
+                </form>
             </div>
         </div>
     </section>
