@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from SetTalents.app.subscribe import Subscriptions
+from app.python.subscribe import Subscriptions
 
 
 app = Flask(__name__, static_url_path='')
